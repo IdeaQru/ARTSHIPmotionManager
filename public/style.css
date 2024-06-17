@@ -1,0 +1,126 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ebee;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+h1 {
+    color: #2a2e35;
+    text-align: center;
+}
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: 20px auto;
+    align-items: center;
+
+}
+label {
+    font-weight: 500;
+    display: block;
+    margin-top: 20px;
+}
+input, select {
+    padding: 4px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 70%;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+input:focus, select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2);
+}
+.step-row {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: 2px; /* Increased gap */
+    margin-bottom: 10px;
+}
+.step-row > div, .step-row > input {
+    border: 2px solid black; /* Thick black border */
+    text-align: left;
+    color: black;
+    font-size: 12px; /* Reduced font size for better fit */
+    padding: 4px;
+}
+button {
+    margin: 10px 5px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #6aa16d;
+}
+#showDataBtn {
+    background-color: #007BFF; /* Bootstrap blue */
+}
+
+#showDataBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+.header {
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+/* File: style.css */
+
+.step-row {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr); /* Misalnya jika Anda memiliki 20 kolom */
+    gap: 2px; /* Jarak antar kolom */
+}
+
+.step-row div, .step-row input {
+    font-weight: bold;
+    padding: 5px; /* Penyesuaian padding untuk lebih kecil */
+    font-size: 12px; /* Mengurangi ukuran font untuk step */
+    color: black;
+    text-align: center; /* Teks di tengah */
+}
+
+/* Ini untuk menentukan warna berdasarkan kelas tambahan yang akan ditambahkan via JavaScript */
+.color-0 { background-color: #f6d365; }
+.color-1 { background-color: #fda085; }
+.color-2 { background-color: #f093fb; }
+.color-3 { background-color: #5ee7df; }
+.color-4 { background-color: #c3cfe2; }
+.color-5 { background-color: #a1c4fd; }
+.color-6 { background-color: #84fab0; }
+.color-7 { background-color: #8fd3f4; }
+.color-8 { background-color: #e0c3fc; }
+.color-9 { background-color: #8ec5fc; }
+.color-10 { background-color: #cfd9df; }
+.color-11 { background-color: #e2ebf0; }
+.color-12 { background-color: #ffdde1; }
+.color-13 { background-color: #fddb92; }
+.color-14 { background-color: #9890e3; }
+.color-15 { background-color: #b1f8f2; }
+.color-16 { background-color: #a7acd9; }
+.color-17 { background-color: #93a5cf; }
+.color-18 { background-color: #b3b3f1; }
+.color-19 { background-color: #e3fdfd; }

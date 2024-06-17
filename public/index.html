@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artship Motion Manager</title>
+    <link rel="icon" href="assets/img/artship.png" type="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ARTSHIP Motion Manager</h1>
+    <form id="motionForm">
+        <div class="section">
+            <label for="headerSelect">Choose Header:</label>
+            <select id="headerSelect" onchange="updateMotionName()">
+                <option value="ZONA_A">ZONA-A</option>
+                <option value="ZONA_B">ZONA-B</option>
+                <option value="ZONA_C">ZONA-C</option>
+                <option value="ZONA_D">ZONA-D</option>
+            </select>
+        </div>
+        <div class="section">
+            <label for="motionSelect">Choose Motion:</label>
+            <select id="motionSelect" onchange="updateMotionName()">
+                <option value="motion1">Motion1</option>
+                <option value="motion2">Motion2</option>
+                <option value="motion3">Motion3</option>
+                <option value="motion4">Motion4</option>
+                <option value="motion5">Motion5</option>
+                <option value="motion6">Motion6</option>
+                <option value="motion7">Motion7</option>
+                <option value="motion8">Motion8</option>
+                <option value="motion9">Motion9</option>
+            </select>
+        </div>
+        <button type="button" id="showDataBtn" onclick="fetchMotionData()">Show Data Motion</button>
+        <button type="button" onclick="submitMotion()">Save Motion</button>
+    </form>
+    <div class="container">
+        <div class="header">DATA LEGS POSITION</div>
+        <div id="legsStepsContainer">
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">DATA HAND POSITION</div>
+        <div id="handStepsContainer">
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="sendingdata.js"></script>
+    <script src="readData.js"></script> 
+    
+</body>
+</html>

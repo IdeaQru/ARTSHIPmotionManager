@@ -1,12 +1,32 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #e9ebee;
-    margin: 0;
-    padding: 20px;
-    color: #333;
+body.light-mode {
+    background-color: #beb6b6;
+    color: #000000;
 }
+
+body.dark-mode {
+    background-color: #9baae9;
+    color: #ffffff;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 20px;
+
+}
+
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
 h1 {
-    color: #2a2e35;
+    color: #455268;
     text-align: center;
 }
 form {

@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
     <h1>ARTSHIP Motion Manager</h1>
+    <button id="toggleModeBtn">Toggle Dark Mode</button>
     <form id="motionForm">
         <div class="section">
             <label for="headerSelect">Choose Header:</label>
@@ -23,17 +24,31 @@
         <div class="section">
             <label for="motionSelect">Choose Motion:</label>
             <select id="motionSelect" onchange="updateMotionName()">
-                <option value="motion1">Motion1</option>
-                <option value="motion2">Motion2</option>
-                <option value="motion3">Motion3</option>
-                <option value="motion4">Motion4</option>
-                <option value="motion5">Motion5</option>
-                <option value="motion6">Motion6</option>
-                <option value="motion7">Motion7</option>
-                <option value="motion8">Motion8</option>
-                <option value="motion9">Motion9</option>
+                <option value="START">START</option>
+                <option value="FIRSTSTEPLEFT">FIRSTSTEPLEFT</option>
+                <option value="WALKREP">WALKREP</option>
+                <option value="STEPHIGH">STEPHIGH</option>
+                <option value="STEPHIGH2">STEPHIGH2</option>
+                <option value="SALAMPEMBUKA">SALAMPEMBUKA</option>
+                <option value="PAPESONLAWANGEJARI">PAPESONLAWANGEJARI</option>
+                <option value="PAPESONLUKNAGASATRU">PAPESONLUKNAGASATRU</option>
+                <option value="VariasiA2">VariasiA2</option>
+                <option value="PEKAADTAMBAHAN">PEKAADTAMBAHAN</option>
+                <option value="PAPESONLAWANGEJARISTOP">PAPESONLAWANGEJARISTOP</option>
+                <option value="VariasiA1">VariasiA1</option>
+                <option value="NEWLUKNAGA">NEWLUKNAGA</option>
+                <option value="NEWLUKNAGA2">NEWLUKNAGA2</option>
+                <option value="NEWLUKNAGA3">NEWLUKNAGA3</option>
+                <option value="PEKAADTAMBAHAN2">PEKAADTAMBAHAN2</option>
+                <option value="NEWLUKNAGHIGH">NEWLUKNAGHIGH</option>
+                <option value="WALKREP">WALKREP</option>
+                <option value="PAPESONTANGANMENYILANG">PAPESONTANGANMENYILANG</option>
+                <option value="PANGAWAKNYRESEG">PANGAWAKNYRESEG</option>
+                <option value="PANGAWAKAGEMKANAN">PANGAWAKAGEMKANAN</option>
+                <option value="PAPESONTANGANMENYILANG2">PAPESONTANGANMENYILANG2</option>
             </select>
         </div>
+        
         <button type="button" id="showDataBtn" onclick="fetchMotionData()">Show Data Motion</button>
         <button type="button" onclick="submitMotion()">Save Motion</button>
     </form>
@@ -50,6 +65,6 @@
     <script src="app.js"></script>
     <script src="sendingdata.js"></script>
     <script src="readData.js"></script> 
-    
+    <script src="toggleMode.js"></script>
 </body>
 </html>

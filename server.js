@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 app.post('/api/motions', (req, res) => {
     const newMotion = req.body;
-    const filePath = path.join(__dirname, 'data', 'motions.json');  // Correct path for motions.json
+    const filePath = path.join(__dirname, '../data', 'motions.json');  // Correct path for motions.json
 
     fs.readFile(filePath, (err, data) => {
         let motions = [];
@@ -57,7 +57,7 @@ app.post('/api/motions', (req, res) => {
 
 app.get('/api/motions/:name', (req, res) => {
     const name = req.params.name;
-    const filePath = path.join(__dirname, 'data', 'motions.json');
+    const filePath = path.join(__dirname, '../data', 'motions.json');
 
     fs.readFile(filePath, (err, data) => {
         if (err) {

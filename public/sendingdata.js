@@ -20,13 +20,14 @@ function submitMotion() {
     const motionData = {
         header: header,
         motion: motion,
-        name: name, // Added name field to identify entries uniquely
+        name: name,
         steps: steps
     };
 
     console.log('Prepared Motion Data:', motionData);
 
     const jsonPayload = stringifyMotionData(motionData);
+    console.log('Prepared pay Data:', jsonPayload);
 
     fetch('http://localhost:3000/api/motions', {
         method: 'POST',
@@ -35,9 +36,9 @@ function submitMotion() {
         },
         body: jsonPayload
     })
-    .then(response => response.json())
-    .then(data => alert('Motion data submitted successfully!'))
-    .catch(error => alert('Error submitting motion data: ' + error.message));
+        .then(response => response.json())
+        .then(data => alert('Motion data submitted successfully!'))
+        .catch(error => alert('Error submitting motion data: ' + error.message));
 }
 
 function collectAllStepsData() {
@@ -51,13 +52,17 @@ function collectStepsData(containerId, numRows) {
     const rows = container.querySelectorAll('.step-row');
     const data = [];
 
-    rows.forEach(row => {
-        const inputs = row.querySelectorAll('input');
-        let rowData = Array.from(inputs, input => Number(input.value) || 0); // Convert and fill empty or invalid inputs with 0
-        while (rowData.length < 20) {
-            rowData.push(0); // Fill the rest of the rowData with 0 if less than 20 columns
+    // Skip the first row (index 0) since it's the header
+    rows.forEach((row, index) => {
+        if (index > 0) {
+            const inputs = row.querySelectorAll('input');
+            let rowData = Array.from(inputs, input => Number(input.value) || 0); // Convert and fill empty or invalid inputs with 0
+
+            while (rowData.length < 20) {
+                rowData.push(0); // Fill the rest of the rowData with 0 if less than 20 columns
+            }
+            data.push(rowData);
         }
-        data.push(rowData);
     });
 
     return data.slice(0, numRows); // Ensure only the first numRows are taken
